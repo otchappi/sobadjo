@@ -42,11 +42,6 @@ export default function NavBar(){
                     >
                         <MenuIcon/>
                     </IconButton>
-                    <Button
-                        color="inherit"
-                    >
-                        Se connecter
-                    </Button>
                 </Toolbar>
             </AppBar>
             <Drawer

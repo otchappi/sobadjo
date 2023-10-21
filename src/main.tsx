@@ -8,8 +8,8 @@ import pages from './datas/pages.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <NavBar/>
     <BrowserRouter>
+      <NavBar/>
       <Routes>
           {pages.map((element)=>(
               <Route key={element.text} path={"/"+element.path} element={element.element}/>

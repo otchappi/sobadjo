@@ -16,10 +16,12 @@ import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
 import Logo from '../../assets/react.svg';
 import {useState} from "react";
 import pages from "../../datas/pages.tsx";
+import {useNavigate} from "react-router-dom";
 
 export default function NavBar(){
     const [open, setOpen] = useState(false);
 
+    const navigate = useNavigate();
     const handleDrawerOpen = () => {
         setOpen(!open);
     };
@@ -61,7 +63,7 @@ export default function NavBar(){
                 <List>
                     {pages.map(({text, icons,path}) => (
                         <ListItem key={text} disablePadding>
-                            <ListItemButton onClick={() => window.location.replace(path)}>
+                            <ListItemButton onClick={() => navigate('/'+path)}>
                                 <ListItemIcon>
                                     {icons}
                                 </ListItemIcon>

@@ -8,7 +8,7 @@ export function findInterval(amount:number, data: Fee[]): number {
             return -1;
         case amount > data[data.length - 1].max:
             return -2;
-        case amount >= data[0].min && amount <= data[data.length - 1].max:
+        case (amount >= data[0].min && amount <= data[data.length - 1].max):
             let left = 0;
             let right = data.length - 1;
         
@@ -23,9 +23,11 @@ export function findInterval(amount:number, data: Fee[]): number {
                     left = mid + 1;
                 }
             }
+        break;
         default:
             return -3;
     }
+    return -3;
 }
 
 export function findMinInterval(amount:number, data: Fee[]): number {

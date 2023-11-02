@@ -1,24 +1,19 @@
-import {Button, Grid, Paper, TextField, Typography, IconButton, InputAdornment, FormControl, InputLabel, OutlinedInput, Select, MenuItem, SelectChangeEvent, Divider} from "@mui/material";
+import {Grid, Paper, TextField, Typography, FormControl, InputLabel, Select, MenuItem, SelectChangeEvent} from "@mui/material";
 import { useState } from "react";
-import TableFees from "../../components/tableFees";
-import OrangeFeeRanges from "../../datas/orangeFees";
-import MTNFeeRanges from "../../datas/mtnFees";
-import Results from "../../components/results";
+import TableFees from "../components/tableFees";
+import OrangeFeeRanges from "../datas/orangeFees";
+import MTNFeeRanges from "../datas/mtnFees";
+import Results from "../components/results";
 
 export default function Home(){
 
     const [operator, setOperator] = useState('1');
     const [amount, setAmount] = useState(-1);
-    const [showResult, setShowResult] = useState(false);
 
     const handleChangeOperator = (event: SelectChangeEvent) => {
         setOperator(event.target.value as string);
         console.log(operator);
     };
-
-    const handleClickEconomiser = () => {
-        setShowResult(true);
-    }
 
     return(
         <Grid container justifyContent="center" alignItems="center" style={{ height: '100vh' }}>

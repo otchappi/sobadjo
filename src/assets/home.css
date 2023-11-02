@@ -1,0 +1,15 @@
+
+.tab-info {
+    font-weight: bold;
+}
+
+.MuiDataGrid-columnHeader {
+    text-transform: uppercase;
+    border-bottom: 1px solid;
+    background-color: #2196f3;/*rgb(252, 252, 252);*/
+    color: white;
+}
+
+.MuiDataGrid-toolbarContainer {
+    margin: 15px;
+}
